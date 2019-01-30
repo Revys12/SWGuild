@@ -1,0 +1,74 @@
+/*
+Creator: Jake Larson
+Date Created: Jan 26, 2019
+Date last modified:
+*/
+
+body {
+  background-color: #FFFEFB;
+  font-family: arial, helvetica, sans-serif;
+  color: #0d1f2d;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+header, footer {
+  background-color: #1E1E1E;
+  color: #FFFEFB;
+  height: 100px;
+  text-align: center;
+  padding: 30px 10px 20px 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+nav {
+  border-top: 3px dashed #1E1E1E;
+  border-bottom: 3px dashed #1E1E1E;
+  margin-top: 4px;
+}
+
+nav a {
+  background-color: #1E1E1E;
+  color: #FFFEFB;
+  padding: 8px;
+  border: thin solid #9C9A98;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 20px 20px;
+  width: 100px;
+  float:left;
+}
+
+nav a:visited {
+  color: #FFC592;
+}
+
+nav a:hover{
+  background-color: #f2eded;
+  color: #1E1E1E;
+}
+
+nav a:active {
+  font-weight: bold;
+}
+
+.clear-float {
+  clear:both;
+}
+
+article img {
+  float:left;
+}
+
+.right-content {
+  float:left;
+}
+
+article {
+  margin-bottom: 16px;
+}

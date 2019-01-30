@@ -6,29 +6,65 @@ Most Recent Revision: 01-21-19 9:51pm
 -->
 
 <html lang="en">
-
-<head>
+  <head>
         <title>Jake Syvers' Portfolio</title>
-</head>
+        <link href="styles/main.css" rel="stylesheet" type="text/css" />
+        <style>
+                caption {
+                  font-weight: bold;
+                  font-size: 1.2em;
+                  margin-bottom: 8px;
+                }
 
-<body>
+                table, th, td {
+                  border: 1px solid #000;
+                  border-collapse: collapse;
+                  padding: 5px 10px;
+                }
+
+                table {
+                  width: 90%;
+                  margin: auto;
+                }
+
+                tr {
+                  height: 30px;
+                }
+
+                th {
+                  background-color: #1E1E1E;
+                  color: #f2eded;
+                }
+
+                tbody tr:nth-child(even) {
+                  background-color: #FFFEFB;
+                }
+
+                tbody tr:nth-child(odd) {
+                  background-color: #9C9A98;
+                }
+
+        </style>
+  </head>
+
+  <body>
        <main>
                 <header>
                         <h1>Portfolio for Jake Syvers</h1>
                 </header>
 
-                <nav>
-                    <hr />
+                <nav class="border">
+
                         <p><a href="projects.html">Projects</a></p>
                         <p><a href="contact.html">Contact</a></p>
                         <p><a href="testimonials.html">Testimonials</a></p>
-                    <hr />
+                        <div class="clear-float"></div>
                 </nav>
 
                 <section>
                           <article id="about">
                                 <h2><span style="text-decoration: underline;"><em>About Me</em></span></h2>
-                                <img src="images/Jake-headshot-350.jpg" alt="Headshot of Jake" />
+                                <img src="images/Jake-headshot-350.jpg" alt="Headshot of Jake" width="250" style="margin-right: 8px" />
                                         <p><strong>Guitarist // Producer // Song-Writer</strong></p>
 
                                         <p>I'm a mixed bag of formally schooled and self-taught as a song-writer, which is
@@ -40,40 +76,43 @@ Most Recent Revision: 01-21-19 9:51pm
                                            or at least, the one that feels the most accurate to the moment will reveal
                                            itself in the process. The more I've been in music, the more I've been feeling
                                            that <span style="text-decoration: underline;"><strong>I don't write songs as much as I learn to discover them.</strong></span></p>
+                                <div class="clear-float"></div>
                           </article>
+
                           <article id="experience">
-
                                  <h2><span style="text-decoration: underline;"><em>Experience</em></span></h2>
-                                 <a href="http://www.syversmusic.com" target="_blank"><img src="images/Syvers-bw-350.jpg" alt="Picture of Jake in his duo, Syvers" /></a>
-
+                                 <a href="http://www.syversmusic.com" target="_blank">
+                                 <img src="images/Syvers-bw-350.jpg" alt="Picture of Jake in his duo, Syvers" width="250" /></a>
+                                 <div class="right-content">
                                  <table>
-                                  <caption>Employment History</caption>
-
-                                  <tr>
-                                  <th>Years of Employment</th>
-                                  <th>Title</th>
-                                  <th>Company</th>
-                                  </tr>
-
-                                  <tr>
-                                  <td>2017-Present</td>
-                                  <td>Musician</td>
-                                  <td>Syvers</td>
-                                  </tr>
-
-                                  <tr>
-                                  <td>2015-Present</td>
-                                  <td>Contract Guitarist</td>
-                                  <td>Eagle Brook Church</td>
-                                  </tr>
-
-                                  <tr>
-                                  <td>2015-2017</td>
-                                  <td>AV Services Prod Coordinator</td>
-                                  <td>University of Northwestern, St. Paul</td>
-                                  </tr>
-
+                                      <caption>Employment History</caption>
+                                      <thead>
+                                          <tr>
+                                              <th>Years of Employment</th>
+                                              <th>Title</th>
+                                              <th>Company</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>2017-Present</td>
+                                              <td>Musician</td>
+                                              <td>Syvers</td>
+                                          </tr>
+                                          <tr>
+                                              <td>2015-Present</td>
+                                              <td>Contract Guitarist</td>
+                                              <td>Eagle Brook Church</td>
+                                          </tr>
+                                          <tr>
+                                              <td>2015-2017</td>
+                                              <td>AV Services Prod Coordinator</td>
+                                              <td>University of Northwestern, St. Paul</td>
+                                          </tr>
+                                      </tbody>
                                  </table>
+
+
 
                                         <!-- My love of atmosphere and cascading dynamic builds has defined a lot of what I produce.
                                             Much of my music revolves around creating textures and soundscapes to transport
@@ -89,12 +128,14 @@ Most Recent Revision: 01-21-19 9:51pm
                                            the ups and downs of being married and the shared experiences that you end up
                                            walking through together. Some of my best song-writing to date, especially
                                            lyrically, has come through the process of writing with Sarah. -->
+                                 </div>
+                                 <div class="clear-float"></div>
                           </article>
+
                           <article id="hobbies">
-
                                  <h2><span style="text-decoration: underline;"><em>Hobbies</em></span></h2>
-                                 <img src="images/Sarah-greece-350.jpg" alt="Picture of Sarah in Greece" />
-
+                                 <img src="images/Sarah-greece-350.jpg" alt="Picture of Sarah in Greece" width="250" />
+                                 <div class="right-content">
                                  <ul>
                                      <li>Authors</li>
                                      <ol>
@@ -142,14 +183,14 @@ Most Recent Revision: 01-21-19 9:51pm
                                            Everybody knows somebody who has some similarities to Michael, but nobody can
                                            really pull together all of his unique mannerisms and off-the-wall responses to
                                            life. I think that's a big reason why the show is as good as it is. -->
+                              </div>
+                              <div class="clear-float"></div>
                           </article>
                </section>
 
                <footer>
-                    <hr />
                     <p>&copy; 2020 Jacob Larson. All rights reserved.</p>
                </footer>
        <main>
-</body>
-
+  </body>
 </html>
