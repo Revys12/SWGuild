@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+Name: Jake Larson
+Date Created: Jan 21,2019
+Most Recent Revision: 01-29-19 7:20pm
+-->
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Lake Cafe - Menu</title>
+          <link href="https://fonts.googleapis.com/css?family=Abel|Archivo+Black|Major+Mono+Display|Maven+Pro" rel="stylesheet">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <style>
+
+        section {
+          font-family: 'Maven Pro', sans-serif;
+          font-weight: bold;
+          background-color: #F2F0EF;
+          color: #0d1f2d;
+          max-width: none;
+        }
+
+        textarea#info {
+          vertical-align: top;
+          border: 2px solid #1E1E1E;
+          height: 150px;
+          width: 40%;
+          padding: 4px 4px;
+          margin: 12px 0;
+          box-sizing: border-box;
+          font-size: 1em;
+        }
+
+        select#inquiry {
+          background-color: #FFF;
+          border: 2px solid #1E1E1E;
+          width: 40%;
+          padding: 4px 4px;
+          margin: 12px 0;
+          box-sizing: border-box;
+          font-size: 1.2em;
+        }
+
+        input[type=text] {
+          border: 2px solid #1E1E1E;
+          width: 40%;
+          padding: 4px 4px;
+          margin: 12px 0;
+          box-sizing: border-box;
+          font-size: 1em;
+        }
+
+        input[type=submit] {
+          border: 1px solid #FFF;
+          font-size: 1.2em;
+          background-color: #1E1E1E;
+          color: #FFFEFB;
+          padding: 4px 8px;
+          margin: 12px;
+        }
+
+        input[type=submit]:hover {
+          border: 1px solid #1E1E1E;
+          background-color: #C6C6C6;
+          color: #1E1E1E;
+        }
+
+        label {
+          font-size: 1.3em;
+          padding: 5px;
+          text-align: right;
+        }
+
+        </style>
+    </head>
+
+    <body>
+               <header>
+                      <h1>lake cafe</h1>
+               </header>
+                      <nav>
+                           <ul>
+                               <p><a href="home.html">Home</a></p>
+                               <p><a href="menu.html">Menu</a></p>
+                               <p><a href="contact.html">Contact Us</a></p>
+                               <div class="clear-float"></div>
+                           </ul>
+                      </nav>
+                   <section>
+                     <div class="container">
+                        <br />
+                        <form action="submit.html" method="POST">
+
+                              <label for="name">Name:</label>
+                              <input type="text" id="name"><br />
+
+                              <label for="email">Email:</label>
+                              <input type="text" id="email"><br />
+
+                              <label for="phone">Phone:</label>
+                              <input type="text" id="phone"><br />
+
+                              <label for="inquiry">Reason for Inquiry:</label>
+                              <select id="inquiry" name="inquiry">
+                              <option value="default" selected>Catering</option>
+                              <option value="party">Private Party</option>
+                              <option value="feedback">Feedback</option>
+                              <option value="other">Other</option>
+                              </select><br />
+
+                              <label for="info" style="vertical-align: text-bottom">Additional Information:</label>
+
+                              <textarea id="info" name="info"></textarea><br />
+
+                              <label for="visit">Have you been to the restaurant?</label>
+
+                              <input type="radio" id="choice" name="visit" value="no">
+                              <label for="choice1">No</label>
+
+                              <input type="radio" id="choice" name="visit" value="yes">
+                              <label for="choice2">Yes</label><br />
+
+                              <label for="days">Best days to contact you:</label>
+
+                                <input type="checkbox" id="days" name="days" value="monday">
+                                <label for="monday">M</label>
+                                <input type="checkbox" id="days" name="days" value="tuesday">
+                                <label for="tuesday">T</label>
+                                <input type="checkbox" id="days" name="days" value="wednesday">
+                                <label for="wednesday">W</label>
+                                <input type="checkbox" id="days" name="days" value="thursday">
+                                <label for="thursday">Th</label>
+                                <input type="checkbox" id="days" name="days" value="friday">
+                                <label for="friday">F</label><br />
+                                <input type="submit" name="submit" value="Send Request">
+
+                        </form>
+                      </div>
+                   </section>
+               <footer>
+                        <p>122 lake st. seattle, wa 98101</p>
+                        <p>206-229-1675</p>
+               </footer>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </body>
+
+</html>

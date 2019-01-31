@@ -2,81 +2,190 @@
 <!--
 Name: Jake Larson
 Date Created: Jan 21,2019
-Most Recent Revision: 01-21-19 10:39pm
+Most Recent Revision: 01-29-19 7:20pm
 -->
 
 <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
         <title>Lake Cafe - Menu</title>
-</head>
+          <link href="https://fonts.googleapis.com/css?family=Abel|Archivo+Black|Major+Mono+Display|Maven+Pro" rel="stylesheet">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <style>
 
-<body>
-       <main>
-                <header>
-                        <h1>Lake Cafe</h1>
-                </header>
+        section {
+          background-color: #F2F0EF;
+          color: #0d1f2d;
+          font-family: 'Maven Pro', sans-serif;
+          text-align: center;
+        }
 
-                <nav>
-                    <hr />
-                        <p><a href="home.html">Home</a></p>
-                        <p><a href="menu.html">Menu</a></p>
-                        <p><a href="contact.html">Contact Us</a></p>
-                    <hr />
-                </nav>
-                <section>
+        h3 {
+          font-weight: bold;
+        }
 
-                    <article id="Menu">
-                          <h3>Burgers and Fries</h3>
-                          <p> An American Classic!
-                              Your choice - with or without cheese
-                              Pickle, onion, tomato, and lettuce
-                              Service with our famous thick cut french fries
-                              $7.95</p>
+        .item {
+          font-size: 1.17em;
+          display: block;
+          line-height: .9em;
+        }
 
-                          <h3>Hot Dog and Chips</h3>
-                          <p>A Summer Classic
-                             Your choice - white or wheat bun
-                             Relish, mustard, and ketchup
-                             Served with our house-made chips
-                             $7.95</p>
+        table {
+          border-top: double lightgray 3px;
+        }
 
-                          <h3>Italian Sausage and Peppers</h3>
-                          <p>An All-Time Favorite
-                             Your choice - mild or spicy Cole Slaw
-                             Served with garlic mashers
-                             $10.95</p>
+        table, th, td {
+          text-align: left;
+          font-size: 1.1em;
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+        }
 
-                          <h3>Tenderloin Sandwich and Chips</h3>
-                          <p>Realy Hits the Spot!
-                             Plain or Sesame Seed Bun
-                             Served with our house-made chips
-                             $8.95</p>
+        th {
+          font-weight: bold;
+          background-color: #F2F0EF;
+        }
 
-                          <h3>House Salad</h3>
-                          <p>On the Lighter Side
-                             Your choice - with or without cheese
-                             Iceberg lettuce, tomatoes, peppers
-                             Thousand Island or Ranch Dressing
-                             Served with a dinner roll
-                             $6.95</p>
+        tbody, td {
+          padding: 5px 0px 5px 10px;
+          border: 1px solid lightgray;
+          border-collapse: collapse;
+        }
 
-                          <h3>Brisket Sandwich and Fries</h3>
-                          <p> A Taste of Texas!
-                              Smoked Brisket on thick-cut
-                              Texas Toast Cole Slaw
-                              Served with our famous thick-cut french fries
-                              $7.95</p>
+        tbody tr:nth-child(even) {
+          background-color: #F2F0EF;
+        }
 
-                    </article>
-                </section>
+        tbody tr:nth-child(odd) {
+          background-color: #C4C2C0;
+        }
 
-               <footer>
-                    <hr />
-                        <p>122 Lake St. Seattle, WA 98101</p>
-                        <p>206-229-1675</p>
-               </footer>
-       <main>
-</body>
+        </style>
+    </head>
 
+    <body>
+          <header>
+                  <h1>lake cafe</h1>
+          </header>
+
+              <nav>
+                  <ul>
+                      <p><a href="home.html">Home</a></p>
+                      <p><a href="menu.html">Menu</a></p>
+                      <p><a href="contact.html">Contact Us</a></p>
+                      <div class="clear-float"></div>
+                  </ul>
+              </nav>
+              <section>
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                                  <h3>Burgers and Fries</h3>
+                            <div class="item">
+                                  <p>An American Classic!</p>
+                                  <p>Your choice - with or without cheese</p>
+                                  <p>Pickle, onion, tomato, and lettuce</p>
+                                  <p>Served with our famous thick cut</p>
+                                  <p>french fries</p>
+                                  <p>$7.95</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                                  <h3>Hot Dog and Chips</h3>
+                            <div class="item">
+                                  <p>A Summer Classic</p>
+                                  <p>Your choice - white or wheat bun</p>
+                                  <p>Relish, mustard, and ketchup</p>
+                                  <p>Served with our house-made chips</p>
+                                  <p>$7.95</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                                  <h3>Italian Sausage and Peppers</h3>
+                            <div class="item">
+                                  <p>An All-Time Favorite</p>
+                                  <p>Your choice - mild or spicy Cole Slaw</p>
+                                  <p>Served with garlic mashers</p>
+                                  <p>$10.95</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="clear-float"></div>
+
+                      <div class="row">
+                      <div class="col-sm-4">
+                                  <h3>Tenderloin Sandwich and Chips</h3>
+                            <div class="item">
+                                  <p>Really Hits the Spot!</p>
+                                  <p>Plain or Sesame Seed Bun</p>
+                                  <p>Served with our house-made chips</p>
+                                  <p>$8.95</p>
+                            </div>
+                        </div>
+                      <div class="col-sm-4">
+                                  <h3>House Salad</h3>
+                            <div class="item">
+                                  <p>On the Lighter Side</p>
+                                  <p>Your choice - with or without cheese</p>
+                                  <p>Iceberg lettuce, tomatoes, peppers</p>
+                                  <p>Thousand Island or Ranch Dressing</p>
+                                  <p>Served with a dinner roll</p>
+                                  <p>$6.95</p>
+                            </div>
+                        </div>
+                      <div class="col-sm-4">
+                                  <h3>Brisket Sandwich and Fries</h3>
+                            <div class="item">
+                                  <p>A Taste of Texas!</p>
+                                  <p>Smoked Brisket on thick-cut</p>
+                                  <p>Texas Toast Cole Slaw</p>
+                                  <p>Served with our famous thick-cut</p>
+                                  <p>french fries</p>
+                                  <p>$7.95</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                <div class="clear-float"></div>
+                <div class="table-responsive">
+                  <table class="beverages">
+                         <thead>
+                            <tr>
+                                 <th colspan="2"><h3>Beverages</h3></th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <tr>
+                                 <td>Root Beer</td>
+                                 <td>$3.00</td>
+                            </tr>
+                            <tr>
+                                 <td>Bottled Water</td>
+                                 <td>$1.25</td>
+                            </tr>
+                            <tr>
+                                 <td>Lemonade</td>
+                                 <td>$1.00</td>
+                            </tr>
+                            <tr>
+                                 <td>Iced Tea</td>
+                                 <td>$1.25</td>
+                            </tr>
+                  </table>
+                </div>
+                <br />
+              </section>
+           <footer>
+                    <p>122 lake st. seattle, wa 98101</p>
+                    <p>206-229-1675</p>
+           </footer>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
 </html>
