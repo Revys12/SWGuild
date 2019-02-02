@@ -12,13 +12,18 @@ Most Recent Revision: 01-29-19 7:20pm
 
         <title>Lake Cafe - Menu</title>
           <link href="https://fonts.googleapis.com/css?family=Abel|Archivo+Black|Major+Mono+Display|Maven+Pro" rel="stylesheet">
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
           <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+          <script type="text/javascript" src="scripts/index.js"></script>
+          <noscript>JavaScript is off. Please enable for optimal viewing of the site.</noscript>
         <style>
 
+
         article {
+          font-size: 1.2em;
           background-color: #F2F0EF;
           color: #0d1f2d;
+          border-top: 3px double #1E1E1E;
           padding: 10px;
         }
 
@@ -32,6 +37,7 @@ Most Recent Revision: 01-29-19 7:20pm
           margin-right: auto;
           max-width: 800px;
         }
+
         </style>
     </head>
 
@@ -39,19 +45,38 @@ Most Recent Revision: 01-29-19 7:20pm
                 <header>
                         <h1>lake cafe</h1>
                 </header>
-                <nav class="border">
-                  <ul>
-                      <p><a href="home.html">Home</a></p>
-                      <p><a href="menu.html">Menu</a></p>
-                      <p><a href="contact.html">Contact Us</a></p>
-                      <div class="clear-float"></div>
+                <nav>
+                  <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html">
+                        <img src="icons/svg/home.svg" width="25px">
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
                   </ul>
                 </nav>
-                  <div class="form-container">
-                    <div>
-                      <h2>Portland location coming soon!</h2>
-                    </div>
-                    <article id="Cafe Description" >
+
+        <div class="container">
+          <div id="carouselContent" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h2>Portland location coming soon!</h2>
+                </div>
+                <div class="carousel-item">
+                    <h2>Our Spring seasonal menu, all locally sourced, begins Mar 1st.</h2>
+                </div>
+                <div class="carousel-item">
+                    <h2>Drink of the Month is our SG Special Brew on tap!</h2>
+                </div>
+            </div>
+        </div>
+      </div>
+                    <article id="cafe-description" >
                           <div style="text-align: center">
                           <img class="img-fluid" src="images/lake-cafe-sign.png" alt="Lake Cafe Neon Sign" width="400" style="border: 2px solid #1E1E1E;"/>
                           </div>
@@ -66,14 +91,13 @@ Most Recent Revision: 01-29-19 7:20pm
                               you can't get anywhere else.</p>
                           </div>
                     </article>
-                  </div>
                <footer>
                         <p>122 lake st. seattle, wa 98101</p>
                         <p>206-229-1675</p>
                </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
 
 </html>

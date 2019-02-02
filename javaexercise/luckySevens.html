@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lucky Sevens</title>
+
+        <script type="text/javascript" src="luckySevens.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet" type="text/css" />
+        <style>
+
+          h1 {
+           margin: 25px 25px 50px 25px;
+           text-align: center;
+           font-size: 5em
+          }
+
+          h2 {
+           border-top: solid 2px lightgray;
+           padding-top: 20px;
+           padding-bottom: 10px;
+           text-align: center;
+           font-size: 4.2em;
+          }
+
+          form {
+            text-align: center;
+          }
+
+          #betlabel {
+            text-align: right;
+            font-size: 1.5em;
+          }
+
+          #startingBet {
+            height: 40px;
+            border: solid 3px #000;
+            box-sizing: border-box;
+          }
+
+          #betform {
+            margin: 0px 10px 40px;
+          }
+
+          #playButton {
+            border: solid 3px #000;
+            font-size: 1.2em;
+            font-weight: bold;
+
+          }
+
+          #results {
+            width: 80%
+          }
+
+
+        table, th, td {
+          font-size: 1.1em;
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+          }
+
+        tbody, td {
+          padding: 5px 0px 5px 10px;
+          border: 1px solid lightgray;
+          border-collapse: collapse;
+        }
+
+        </style>
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+        <h1>Lucky Sevens</h1>
+    </div>
+  </div>
+      <form name="luckyRolls" class="form-horizontal">
+          <div class="row justify-content-center">
+            <div class="form-group" id="betform">
+              <div class="col-6">
+                  <label for="num1" class="col-sm-6" id="betlabel">Starting Bet:</label>
+              </div>
+              <div class="col-sm-2">
+                  <input type="number" class="form-control" id="startingBet" placeholder="0">
+              </div>
+           </div>
+         </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <button onclick="play()" type="submit" id="playButton" class="btn btn-default">Play</button>
+          </div>
+        </div>
+      </form>
+        <table id="results" class="table table-striped" style="display:none" >
+              <thead>
+                  <tr>
+                      <th colspan="2"><h2>Results</h2></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>Starting Bet</td>
+                    <td><span id="bet"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Total Rolls Before Going Broke</td>
+                    <td><span id="goingBroke"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Highest Amount Won</td>
+                    <td><span id="amountWon"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Roll Count at Highest Amount Won</td>
+                    <td><span id="rollCount"></span></td>
+                  </tr>
+              </tbody>
+      </table>
+</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

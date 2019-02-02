@@ -12,8 +12,10 @@ Most Recent Revision: 01-29-19 7:20pm
 
         <title>Lake Cafe - Menu</title>
           <link href="https://fonts.googleapis.com/css?family=Abel|Archivo+Black|Major+Mono+Display|Maven+Pro" rel="stylesheet">
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
           <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+          <script type="text/javascript" src="scripts/lakecafecontact.js"></script>
+          <noscript>JavaScript is off. Please enable for optimal viewing of the site.</noscript>
         <style>
 
         section {
@@ -21,13 +23,11 @@ Most Recent Revision: 01-29-19 7:20pm
           font-weight: bold;
           background-color: #F2F0EF;
           color: #0d1f2d;
-          text-align: center;
         }
 
         textarea#info {
           border: 2px solid #1E1E1E;
-          height: 150px;
-          width: 33%;
+          height: 100px;
           padding: 4px 4px;
           margin: 12px 0;
           box-sizing: border-box;
@@ -35,12 +35,12 @@ Most Recent Revision: 01-29-19 7:20pm
         }
 
         select#inquiry {
-          float: left;
           background-color: #FFF;
           border: 2px solid #1E1E1E;
           height: 30px;
           width: 33%;
           padding: 4px 4px;
+          margin-top: 20px;
           margin-bottom: 18px;
           box-sizing: border-box;
           font-size: 1.2em;
@@ -48,21 +48,9 @@ Most Recent Revision: 01-29-19 7:20pm
 
 
         label {
-          float: left;
           font-size: 1.3em;
         }
 
-        label.days {
-          float:left;
-          padding-left: 5px;
-          padding-right: 25px;
-        }
-
-        label.choice {
-          float:left;
-          padding-left: 5px;
-          padding-right: 25px;
-        }
 
         input[type=text] {
           border: 2px solid #1E1E1E;
@@ -70,14 +58,6 @@ Most Recent Revision: 01-29-19 7:20pm
           margin: 12px 0;
           box-sizing: border-box;
           font-size: 1em;
-        }
-
-        input[type=checkbox] {
-          float: left;
-        }
-
-        input[type=radio] {
-          float: left;
         }
 
         input[type=submit] {
@@ -101,100 +81,97 @@ Most Recent Revision: 01-29-19 7:20pm
                <header>
                       <h1>lake cafe</h1>
                </header>
-                      <nav>
-                           <ul>
-                               <p><a href="home.html">Home</a></p>
-                               <p><a href="menu.html">Menu</a></p>
-                               <p><a href="contact.html">Contact Us</a></p>
-                               <div class="clear-float"></div>
-                           </ul>
-                      </nav>
+               <nav>
+                 <ul class="nav nav-pills">
+                   <li class="nav-item">
+                     <a class="nav-link" href="home.html">
+                       <img src="icons/svg/home.svg" width="25px">
+                     </a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="menu.html">Menu</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact Us</a>
+                   </li>
+                     <div class="clear-float"></div>
+                 </ul>
+               </nav>
                    <section>
                         <br />
                     <div class="container-fluid">
-                        <form class="form-horizontal" action="submit.html" method="POST">
-
-                              <label class="control-label col-xs-4" for="name">Name:</label>
-                              <input class="form-control" type="text"  id="name"><br />
-
-                              <div class="clear-float"></div>
-
-                              <label class="control-label col-xs-4" for="email">Email:</label>
-                              <input type="text" class="form-control" id="email"><br />
-
-                              <div class="clear-float"></div>
-
-
-                              <label class="control-label col-xs-4" for="phone">Phone:</label>
-                              <input type="text" class="form-control" id="phone"><br />
-
-                              <div class="clear-float"></div>
-
-                              <label class="control-label col-xs-4" for="inquiry">Reason for Inquiry:</label>
-
-                              <select id="inquiry" name="inquiry">
+                        <form name="contactUs" onsubmit="return validateForm();" action="submit.html" method="POST">
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-4" for="name">Name:</label>
+                              <input type="text" class="form-control mb-2 mr-sm-2" style="width:250px" id="name"><br />
+                            </div>
+                          </div>
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-4" for="email">Email:</label>
+                              <input type="text" class="form-control mb-2 mr-sm-2" style="width:250px" id="email"><br />
+                            </div>
+                          </div>
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-4" for="phone">Phone:</label>
+                              <input type="text" class="form-control mb-2 mr-sm-2" style="width:250px" id="phone"><br />
+                            </div>
+                          </div>
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-2" for="inquiry">Reason for Inquiry:</label>
+                              <select id="inquiry" class="form-control mb-2 mr-sm-2" style="width:200px" name="inquiry">
                               <option value="default" selected>Catering</option>
                               <option value="party">Private Party</option>
                               <option value="feedback">Feedback</option>
                               <option value="other">Other</option>
                               </select><br />
-
-                              <div class="clear-float"></div>
-
-                              <label class="control-label col-xs-4" for="info" style="vertical-align: text-bottom">Additional Information:</label>
-
-                              <textarea class="form-control" id="info" name="info"></textarea><br />
-
-                              <div class="clear-float"></div>
-
-
-                              <label class="control-label col-xs-4" for="visit">Have you been to the restaurant?</label>
-
-                              <input type="radio" id="choice1" name="visit" value="no" checked>
-                              <label class="choice" for="choice1">No</label>
-
-
-                              <input type="radio" id="choice2" name="visit" value="yes">
-                              <label class="choice" for="choice2">Yes</label><br />
-
-                              <div class="clear-float"></div><br/>
-
-
-                              <label class="control-label col-xs-4" for="days">Best days to contact you:</label>
-
-
-                              <input type="checkbox" id="monday" name="days" value="monday">
+                            </div>
+                          </div>
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-2" for="info">Additional Information:</label>
+                              <textarea class="form-control mb-2 mr-sm-2" id="info" name="info"></textarea><br />
+                            </div>
+                          </div>
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-2" for="visit">Have you been to the restaurant?</label>
+                              <input type="radio" id="choice1" class="form-control mr-sm-2" name="visit" value="no" checked>
+                              <label class="mr-sm-2" for="choice1">No</label>
+                              <input type="radio" id="choice2" class="form-control mr-sm-2" name="visit" value="yes">
+                              <label class="mr-sm-2" for="choice2">Yes</label><br />
+                            </div>
+                          </div>
+                          <div class="form-inline justify-content-center">
+                            <div class="form-group">
+                              <label class="mr-sm-2" for="days">Best days to contact you:</label>
+                              <input type="checkbox" id="monday" class="form-control ml-sm-4 mr-sm-2" name="days" value="monday">
                                   <label class="days" for="monday">M</label>
-
-
-                                  <input type="checkbox" id="tuesday" name="days" value="tuesday">
+                                  <input type="checkbox" id="tuesday" class="form-control ml-sm-4 mr-sm-2" name="days" value="tuesday">
                                   <label class="days" for="tuesday">T</label>
-
-
-                                  <input type="checkbox" id="wednesday" name="days" value="wednesday">
+                                  <input type="checkbox" id="wednesday" class="form-control ml-sm-4 mr-sm-2" name="days" value="wednesday">
                                   <label class="days" for="wednesday">W</label>
-
-
-                                  <input type="checkbox" id="thursday" name="days" value="thursday">
+                                  <input type="checkbox" id="thursday" class="form-control ml-sm-4 mr-sm-2" name="days" value="thursday">
                                   <label class="days" for="thursday">Th</label>
-
-
-                                  <input type="checkbox" id="friday" name="days" value="friday">
+                                  <input type="checkbox" id="friday" class="form-control ml-sm-4 mr-sm-2" name="days" value="friday">
                                   <label class="days" for="friday">F</label>
-                         <div class="clear-float"></div><br />
-
+                            </div>
+                          </div>
+                            <div class="form-inline justify-content-center mb-2">
                               <input class="btn btn-default"  type="submit" name="submit" value="Send Request">
-
-                        </form>
+                            </div>
+                        </form><br/>
                     </div>
                    </section>
                <footer>
                         <p>122 lake st. seattle, wa 98101</p>
                         <p>206-229-1675</p>
                </footer>
-       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+               <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+               <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
-
 </html>
